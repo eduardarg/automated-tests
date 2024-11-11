@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <title>Sample page</title>
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=dAJmcCwng2_ESAtZXutjy32I9xRth3uIPqFsK9-HWOdJ12PqImFKJIwCQafg6K8nXLPGWKyy2VyEVtpK0qFzYqwG8kN-w3JdE69ptXagVyUxbRU_JzIwWLAdlr9ZBAo8vGpIV2Q4IE17OKlw73-AlncKby74PKquasemygqBc1mS-JoX022rsE6weHrJskXoPya0F6Yx3sLczOzc78tnfnL6F7UqLhXtxCxUjuqZzF9Vb0HG4N26_cO44h3Ty9OQxCS1pIYGN2255Mp5RBTk9w5weLuEOF4Sd5KGrYwfl7ihJYBckeuMOKwptSwRuSR-MwC2hdOfGmWpcBPaPhwggOXc-k1KaAK-mGPP1KOHJvtvaAiWVf-bHibhnIQ_MoDSeiHlKPkXiodymXrOGP_T8_glSZ16bDN_2o_I1_R1lZ-HUz_yN-QVZX2_WuVvhR2HUqIJtPQVpztE9_vgv5ecfAcxbt2GbL8iyxg4ywDAj4I4IwlQBYhYgFhknca3oYHAMn9htTOEzL8uNO1dRNubxFGCcQZdjaUpbed35r4CjpTnbHWiKSYiMo9edPloyab2lDndjMvQxFTzI40YtCkiQGas6rSCBI-wWWPb9sPdUM4sUvt1uM6NSIihC3rOdmNkN9thZCAtG5QGkRvyC1fe6fvDWjIHA8jY992BYQlaWps" charset="UTF-8"></script></head>
+
+<body>
+    <h1>Basic page</h1>
+    <div>
+      <button name="generate" onclick="generate()">generate and wait, please</button>
+      <p id="my-value"></p>
+    </div>
+    <div>
+     <input id="input" value="garbage">
+     <button name="button" onclick="myFunction()">test</button>
+    </div>
+    <p id="result"></p>
+
+    <script>
+        function myFunction() {
+	    alert("Done!");
+            let txt = document.getElementById("input").value;
+            document.getElementById("result").innerHTML = "It workls! " + txt + "!";
+        };
+        function generate() {
+            document.getElementById("my-value").innerHTML = "";
+            let r = (Math.random() + 1).toString(36).substring(7);
+            let n = Math.floor(Math.random() * 5) * 1000;
+            setTimeout(() => {
+              document.getElementById("my-value").innerHTML = r;
+            }, n);
+            
+        };
+    </script>
+</body>
+
+</html>
